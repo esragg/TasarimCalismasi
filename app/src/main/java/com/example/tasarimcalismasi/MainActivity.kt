@@ -5,10 +5,13 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.size
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
@@ -39,26 +42,17 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun Sayfa() {
 
-    Box {
+    Row(horizontalArrangement = Arrangement.Center,
+        modifier = Modifier.fillMaxWidth()){
         Box(modifier = Modifier
-            .size(400.dp)
-            .background(Color.Black))
-        Column{
-            Box(modifier = Modifier
-                .size(100.dp)
-                .background(Color.Red))
-            Box(modifier = Modifier
-                .size(100.dp)
-                .background(Color.Green))
-            Row {
-                Box(modifier = Modifier
-                    .size(100.dp)
-                    .background(Color.Blue))
-                Box(modifier = Modifier
-                    .size(100.dp)
-                    .background(Color.Yellow))
-            }
-        }
+            .size(80.dp)
+            .background(Color.Red))
+        Box(modifier = Modifier
+            .size(50.dp)
+            .background(Color.Green))
+        Box(modifier = Modifier
+            .size(100.dp)
+            .background(Color.Blue))
     }
 
 }
